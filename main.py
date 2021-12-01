@@ -11,35 +11,15 @@ def read_input_01_01(filepath: str) -> list:
 
 
 def calc_and_count_increases_01_01(value_list: list) -> int:
-    prev_value = None
-    counter = 0
-    for value in value_list:
-        if prev_value is None:
-            prev_value = value
-        else:
-            if value - prev_value > 0:
-                counter += 1
-            prev_value = value
-    return counter
+    return len([(y - x) for x, y in zip(value_list[:-1], value_list[1:]) if y - x > 0])
 
 
 # ( B + C + D) - (A + B + C) = D - A
 def calc_and_count_increases_01_02(value_list: list) -> int:
-    value_A = value_list[0]
-    value_B = value_list[1]
-    value_C = value_list[2]
-    counter = 0
-    for value in value_list[3:]:
-        if value - value_A > 0:
-            counter += 1
-        value_A = value_B
-        value_B = value_C
-        value_C = value
-    return counter
+    return len([(y - x) for x, y in zip(value_list[:-3], value_list[3:]) if y - x > 0])
 
 
 if __name__ == '__main__':
     list_01_01 = read_input_01_01("inputs/01_input.txt")
     print(f"Answer for 01-01 is {calc_and_count_increases_01_01(list_01_01)}")
     print(f"Answer for 01-02 is {calc_and_count_increases_01_02(list_01_01)}")
-
