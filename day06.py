@@ -50,7 +50,7 @@ if __name__ == '__main__':
     print(f"'shitty' Answer 1 for day 6 is {part_one(parse_input(get_data(day=6, year=2021)), 80)}")
     print(f"Execution time of 'shitty' algorithm {time.time() - startTime}s")
 
-    print(f"'better' Answer 2 for day 6 is {part_two(parse_input_by_count(get_data(day=6, year=2021)), 80)}")
+    print(f"'better' Answer 1 for day 6 is {part_two(parse_input_by_count(get_data(day=6, year=2021)), 80)}")
     print(f"Execution time of 'better' algorithm {time.time() - startTime}s")
 
     # print(f"Answer 2 for day 5 is {part_two(read_input_for_testing('inputs/input_05_test.txt'))}")
