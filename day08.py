@@ -1,10 +1,5 @@
 import time
 
-opener_chars = "([{<"
-closer_chars = ")]}>"
-error_scores_1 = {")": 3, "]": 57, "}": 1197, ">": 25137}
-error_scores_2 = {")": 1, "]": 2, "}": 3, ">": 4}
-
 
 def read_input_for_testing(filepath: str):
     file = open(filepath, "r")
